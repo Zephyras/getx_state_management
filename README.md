@@ -15,14 +15,23 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-## GetX 상태관리 ##
+# GetX 상태관리 ##
+
+* GetMaterial() 처음 GetX Material기능을 사용하기 위한 선언
+<pre>
+<code>
 GetMaterial()
+</code>
+</pre>
 
-
-
-#Router (라우터)
+## Router (라우터)
+* 라우터를 쓰기위한 선언
+<pre>
+<code>
 initialRoute: "/",
-라우터를 쓰기위한 선언
+</code>
+</pre>
+
 
 1.일반적인 화면전환
 <pre>
