@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx/feature/state/controller/count_controller_with_getx.dart';
 import 'package:getx/feature/state/controller/count_controller_with_provider.dart';
-import 'package:getx/feature/state/with_getx.dart';
-import 'package:getx/feature/state/with_provider.dart';
+import 'package:getx/feature/state/view/with_getx.dart';
+import 'package:getx/feature/state/view/with_provider.dart';
 import 'package:provider/provider.dart';
 
 class SimpleStateManagePage extends StatelessWidget {
