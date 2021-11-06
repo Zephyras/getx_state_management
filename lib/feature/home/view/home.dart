@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx/feature/dependencys/dependency_manage_page.dart';
-import 'package:getx/feature/normal/First/first.dart';
+import 'package:getx/feature/getxservice/controller/getx_controller.dart';
+import 'package:getx/feature/getxservice/controller/getx_service.dart';
+import 'package:getx/feature/getxservice/view/controller.dart';
+import 'package:getx/feature/getxservice/view/service.dart';
+import 'package:getx/feature/normal/view/first.dart';
 import 'package:getx/feature/reactive_state_manage_page/reactive_state_manage_page.dart';
 import 'package:getx/feature/simple_state_manage_page/simple_state_manage_page.dart';
 
@@ -90,6 +94,38 @@ class Home extends StatelessWidget {
               child: Text("의존성 주입"),
               onPressed: () {
                 Get.to(DependencyManagePage());
+              },
+            ),
+            ElevatedButton(
+              child: Text("바인딩"),
+              onPressed: () {
+                Get.toNamed("/binding");
+              },
+            ),
+            ElevatedButton(
+              child: Text("GetX Controller"),
+              onPressed: () {
+                Get.to(
+                  () => GetxControllerWidget(),
+                  binding: BindingsBuilder(
+                    () => Get.lazyPut<GetxControllerTest>(
+                      () => GetxControllerTest(),
+                    ),
+                  ),
+                );
+              },
+            ),
+            ElevatedButton(
+              child: Text("GetX Service"),
+              onPressed: () {
+                Get.to(
+                  () => GetxServiceWidget(),
+                  binding: BindingsBuilder(
+                    () => Get.lazyPut<GetxServiceTest>(
+                      () => GetxServiceTest(),
+                    ),
+                  ),
+                );
               },
             ),
           ],

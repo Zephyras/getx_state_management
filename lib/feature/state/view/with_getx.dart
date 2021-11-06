@@ -15,7 +15,7 @@ class WithGetX extends StatelessWidget {
           //Get.find<CountControllerWithGetX>().increase();
           _controllerWithGetx.count = _controllerWithGetx.count;
 
-          _controllerWithGetx.increase(id);
+          _controllerWithGetx.increase2(id);
         },
         child: Text("+", style: TextStyle(fontSize: 30)));
   }
