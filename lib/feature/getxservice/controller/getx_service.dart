@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:getx/feature/getxservice/view/service.dart';
 
 class GetxServiceTest extends GetxService {
   static GetxServiceTest get to => Get.find();
@@ -6,6 +7,7 @@ class GetxServiceTest extends GetxService {
 
   @override
   void onInit() {
+    Get.put<GetxServiceWidget>(GetxServiceWidget(), permanent: true);
     super.onInit();
   }
 
